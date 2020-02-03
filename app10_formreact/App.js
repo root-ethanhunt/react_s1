@@ -17,7 +17,7 @@ class App extends React.Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({headerText: "I am the app header..."})
-    }, 4000)
+    }, 3000)
   }
 
   render() {

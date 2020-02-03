@@ -36,7 +36,10 @@ export class Parent extends Component {
         console.log("Comp did Mount -P");
 
      }
+    componentWillUnmount(){
+        console.log("Comp will UNMount -P");
 
+    }
     
      componentWillReceiveProps(){
        // this.settingState();

@@ -17,17 +17,13 @@ export class TempCalc extends React.Component
      this.handleTemp = this.handleTemp.bind(this)
      
    }
-  
    handleTemp(val)
   {
-    
-    console.log('invoked'+val)
    
-      
+    console.log('invoked'+val)
+       
          this.setState({temp:val})
         // this.setState({scale:sc})
-      
-    
     
   }
    render()

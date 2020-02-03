@@ -24,7 +24,7 @@ export class Counter extends Component {
    incrementCtr(){
 
        console.log('in increment');
-       this.setState({ ctr1: this.state.ctr + 1});
+       this.setState({ ctr: this.state.ctr + 1});
   }
    
 

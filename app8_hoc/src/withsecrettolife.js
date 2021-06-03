@@ -1,10 +1,10 @@
 import React from 'react';
 
-const withSecretToLife = (WrappedComponent) => {
+const withSecretToLifeHOC = (OriginalComponent) => {
   class HOC extends React.Component {
     render() {
       return (
-        <WrappedComponent
+        <OriginalComponent
           {...this.props}
           secretToLife={13}
         />
@@ -15,4 +15,4 @@ const withSecretToLife = (WrappedComponent) => {
   return HOC;
 };
 
-export default withSecretToLife;
+export default withSecretToLifeHOC;

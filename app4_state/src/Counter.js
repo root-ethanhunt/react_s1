@@ -21,6 +21,11 @@ export class Counter extends Component {
 
   
    }
+
+
+
+
+   
    incrementCtr(){
 
        console.log('in increment');

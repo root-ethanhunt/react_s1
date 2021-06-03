@@ -13,15 +13,13 @@ import React, { Component } from 'react';
        this.setState({date:new Date()})
    //return (<FormattedDt date={new Date()} />);
  }
-
-render(){
+ render(){
            setInterval(() => this.tick(), 1000);
 return(
    <h1> Today is : {this.state.date.toLocaleString()}</h1> 
 )
 }
    
-
 }
 
 /*function FormattedDt(props) {

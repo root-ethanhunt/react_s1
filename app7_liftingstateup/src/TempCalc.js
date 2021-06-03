@@ -8,31 +8,29 @@ function BoilingVerdict(props)
    else
     return(<p>Water will not boil</p>)
 }
+
 export class TempCalc extends React.Component
 {
    constructor(props)
    {
      super(props)
-     this.state ={scale:'',temp:'',tempC:'',tempV:''}
+     this.state ={temp:''}
      this.handleTemp = this.handleTemp.bind(this)
      
    }
    handleTemp(val)
   {
    
-    console.log('invoked'+val)
-       
-         this.setState({temp:val})
+    console.log('invoked'+val)       
+    this.setState({temp:val})
         // this.setState({scale:sc})
     
   }
    render()
    {
       //  this.setState({temp:this.props.temp,scale:this.props.scale})
-    
-      const temperature = this.state.temp; 
-     
-     return(
+          const temperature = this.state.temp; 
+         return(
             
         <div>
             Enter Temp in Degree Centigrade :
@@ -40,8 +38,7 @@ export class TempCalc extends React.Component
         
         <BoilingVerdict temp={temperature} />
          </div>
-     
-     
+         
      )
      
    }

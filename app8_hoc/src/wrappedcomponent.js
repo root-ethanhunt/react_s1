@@ -1,5 +1,5 @@
 import React from 'react';
-import withSecretToLife from './withsecrettolife';
+import withSecretToLifeHOC from './withsecrettolife';
 
 const DisplayTheSecret = props => (
  
@@ -9,6 +9,6 @@ const DisplayTheSecret = props => (
   </div>
 );
 
-const WrappedComponent = withSecretToLife(DisplayTheSecret);
+const WrappedComponent = withSecretToLifeHOC(DisplayTheSecret);
 
 export default WrappedComponent;

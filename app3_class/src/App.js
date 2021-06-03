@@ -5,15 +5,23 @@ import './App.css';
 class App extends Component {
    constructor(props){
      super(props)
-     
+      
+     this.state={ctr:0}
+         this.incrementCtr = this.incrementCtr.bind(this);
+
+
+
      console.log("hi");
    }
 
-
+     incrementCtr(){
+       this.setState({ctr:this.state.ctr+1})
+     }
   render() {
     return (
       <div className="App">
-        <h1>Hello World....from first React class .. {this.props.name1}...</h1>
+        <button onClick = {this.incrementCtr}   >Click</button>
+       You clicked for {this.state.ctr} times
       </div>
     );
   }

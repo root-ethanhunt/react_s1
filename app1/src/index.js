@@ -65,7 +65,7 @@ const element =<div> <h1>This is {formatName(user1)}</h1>
                      //************************************** */
                      //Demo7: Specifiying attributes with JSX.
 
-//ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

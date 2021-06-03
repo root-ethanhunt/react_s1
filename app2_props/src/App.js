@@ -1,39 +1,46 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
-   
-function App(props){
-  
-  return <h1>Hello World... { props.name} </h1>
+//import './App.css';
 
+function BoilingVerdict(props)
+{
+   if(props.temp>100)
+     return(<p>Water will boil</p>)
+   else
+    return(<p>Water will not boil</p>)
 }
-
-ReactDom.render(<App name='abc' />,document.getElementById('root'));
-
-
-
-
-
-
-/*
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-         
-         
-         
-            Hello  ....Welcome to React World!!!
-          
-        </header>
-       
+export class App extends Component{
+        
+  constructor(props)
+  {
+    super(props)
+    
+    this.state={temp:0}
+    
+    this.handleChange =this.handleChange.bind(this)
+  }
+  handleChange(event)
+  {
+   this.setState({temp:event.target.value})
+    console.log('changed'+ event.target.value);
+  }  
+  render()
+  {
+     const temperature =this.state.temp;
+    // const scale = this.props.scale;
+   
+    return(
+     <div>
+      <input type='number' value ={temperature} 
+        onChange={this.handleChange} /><br></br>
+        <BoilingVerdict temp={temperature}   />
       </div>
-    );
+       
+
+        )
   }
 }
-*/
-export default App;
+
 
 
 
